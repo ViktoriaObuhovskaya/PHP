@@ -1,14 +1,14 @@
 <?php
 
-require_once "player.php"; //внутри реализовать class Player
-require_once "tournament.php"; //внутри реализовать класс Tournament
+require_once "player.php";
+require_once "tournament.php";
 
 $tournamentA = new Tournament("Tournament А", "2022.12.30");
 $tournamentA
-->addPlayer(new Player("Player 1","Minsk"))
-->addPlayer(new Player("Player 2","Mogilev"))
-->addPlayer(new Player("Player 3","Vitebsk"))
-->addPlayer(new Player("Player 4","Gomel"));
+->addPlayer( (new Player("Player 1"))->setCity("Minsk") )
+->addPlayer( (new Player("Player 2"))->setCity("Mogilev") )
+->addPlayer( (new Player("Player 3"))->setCity("Vitebsk") )
+->addPlayer( (new Player("Player 4"))->setCity("Gomel") );
 $tournamentA->createPairs();
 
 $tournamentB = new Tournament("Tournament B");

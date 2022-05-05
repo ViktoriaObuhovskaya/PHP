@@ -5,10 +5,15 @@ class Player
   private $name;
   private $city;
 
-  public function __construct($name,$city=null)
+  public function __construct($name)
   {
     $this->name = $name;
-    $this->city = $city;
+  }
+
+  public function setCity($city)
+  {
+    $this->city= $city;
+    return $this;
   }
 
   public function getName()
